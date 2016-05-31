@@ -8,6 +8,10 @@ class Sudoku
     board_string.chars.each_slice(9).to_a
   end
 
+  def string
+    @board_string = @board.flatten.join("")
+  end
+
   def to_s
     new_string = ""
     @board.each do |row|
